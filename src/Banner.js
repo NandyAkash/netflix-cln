@@ -20,23 +20,22 @@ function Banner() {
     fetchData();
   },[])
 
-console.log(movie);
   function truncate(string,n) {
     return string?.length > n ? string.substr(0, n-1) + '...' : string;
   }
   return (
     <header className='banner' style={{
         backgroundSize: "cover",
-        backgroundImage: `url("https://res.cloudinary.com/practicaldev/image/fetch/s--THrf5Yjw--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/n6brz4p7iq7j1mulo1nv.jpg")`,
+        backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
         backgroundPosition: "center center",
     }}>
       <div className="banner-contents">
-        <h1 className="banner-title">Movie Name</h1>
+        <h1 className="banner-title">{movie?.title || movie?.name || movie?.original_name}</h1>
         <div className="banner-buttons">
           <button className="banner-button">Play</button>
           <button className="banner-button">My List</button>
         </div>
-        <h3 className="banner-desc">{truncate(`It is orginal series of netflix.It is orginal series of netflix. It is orginal series of netflix. It is orginal series of netflix. It is orginal series of netflix. It is orginal series of netflix`,150)}</h3>
+        <h3 className="banner-desc">{truncate(movie.overview,150)}</h3>
       </div>
       <div className="banner-fadeBottom" />
     </header>
