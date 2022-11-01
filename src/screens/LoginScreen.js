@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import './LoginScreen.css'
 import SignInScreen from './SignInScreen';
+import '../firebase'
 
 function LoginScreen() {
   const [signIn, setSignIn] = useState(false);
+  
   return (
     <div className='loginScreen'>
       <div className="loginScreen_background">
@@ -13,6 +15,7 @@ function LoginScreen() {
 
         <button 
         onClick={() => setSignIn(true)}
+        // onClick={handleSignin}
         className='loginScreen_btn'>Sign In</button>
         <div className="loginScreen_gradient"></div>
       </div>

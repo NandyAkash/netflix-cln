@@ -9,12 +9,37 @@
     display: grid;
     flex-direction: column;
 }
+.signInScreen >form > h1 {
+    text-align: left;
+    padding-bottom: 25px;
+}
 
 .signInScreen > form > input { 
-    padding: 10px;
+    margin-bottom: 14px;
     outline-width: 0;
-    height: 30px;
-    
+    height: 40px;
+    border-radius: 5px;
     border: none;
-    max-width: 600px;
+    padding: 5px 15px;
+}
+.signInScreen > form > button {
+    padding: 16px 20px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #e50914;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+} 
+.signInScreen >form > h4 {
+    text-align: left;
+    margin-top: 20px;
+}
+.signInScreen_span {
+    color: grey;
+}
+.signInScreen_link:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
